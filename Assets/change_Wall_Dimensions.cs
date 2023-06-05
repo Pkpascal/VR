@@ -9,6 +9,7 @@ public class change_Wall_Dimensions : MonoBehaviour
     public Slider dephtInput;
     public Slider heightInput;
     public Slider widthInput;
+    public GameObject canvas;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,9 @@ public class change_Wall_Dimensions : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        wall.transform.localScale = new Vector3(widthInput.value,heightInput.value, dephtInput.value);
+        if(canvas.activeSelf == true){
+             wall.transform.localScale = new Vector3(widthInput.value,heightInput.value, dephtInput.value);
+        }
+       
     }
 }
